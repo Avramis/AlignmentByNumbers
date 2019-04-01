@@ -1,0 +1,48 @@
+#############################################################
+#                                                           #
+#                            ALBN                           #
+#                     AlignmentByNumbers                    #
+#                                                           #
+#############################################################
+Usage:
+Parameters:
+-fa [./genome.fasta]              -- (Required parameter) fasta file directory and file name
+
+-fq [./reads.fastq]               -- (Required parameter) fastq file directory and file name
+
+-o [./samoutputdirectory]         -- (Optional parameter) output folder directory to save the alignment sam file. If not provided the sam file is save in the same directory as the fastq file.
+
+-kmer [x]                         -- (Optional parameter) kmer size to use for the analysis [default: 100]
+
+-rep [Representation method]      -- (Optional parameter) Provide the representation method to use for converting nucleotide sequences to numerical sequences [default: Voss_indicators]
+Options:
+01) Atomic_Numbers
+02) Complex_Numbers
+03) Dna_Walk
+04) EIIP_numbers
+05) Integer_numbers
+06) Pair_numbers
+07) Real_numbers
+08) Tetrahedron
+09) Voss_indicators        --     default option
+10) Z_curve
+
+-tra [Transformation method]      -- (Optional parameter) Provide the transformation method to use for compressing data to a lower dimensional space [default: DFT]
+Options:
+01) DFT                    --     default option
+02) DWT 
+03) PAA
+
+-clvl [y]                         -- (Optional parameter) compression level to use for the analysis [default: 2]
+
+-knn [kn]                         -- (Optional parameter)the number of kn neighbor data to use for the KNN search [default: 100]
+
+-s [true/false]                   -- (Optional parameter) run a sensitive search [default: fasle]
+
+-bs [x]                           -- (Optional parameter) set the size of the tree [default: 100000]
+
+-rd [./report_output_directory]   -- (Optional parameter) output directory to save the timing report file. If not provided the report text file is save in the same directory as the fastq file.
+
+Example:./Alignment_by_numbers -fa ./genome.fasta -fq ./reads.fastq
+./Alignment_by_numbers -fa ./genome.fasta -fq ./reads.fastq -kmer 300 -rep Tetrahedron -tra DWT -clvl 4 -knn 30
+./Alignment_by_numbers -fa ./genome.fasta -fq ./reads.fastq -kmer 300 -rep Tetrahedron -tra DWT -o ./samfiledirectory -clvl 4 -knn 30 -s true -bs 10000 -rd ./reportsfile
