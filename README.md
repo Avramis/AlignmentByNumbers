@@ -3,6 +3,7 @@
 ## Description
 Alignment_by_numbers is a prototype reference-based nucleotide sequence aligner. The tool uses signal processing techniques to align short nucleotide sequences to a reference genome.
 ## Installation (Linux, Mac OS X):
+```
 i.e for a Linux  or a Mac executable with GCC compiler 
 First step make the script executable using
 chmod u+x ./GCC_Installation
@@ -18,6 +19,7 @@ chmod u+x ./INTEK_Installation
   and then invoke the executable
 
 ./INTEL_Installation
+```
 ## Examples
 ```
 Usage:
