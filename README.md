@@ -3,12 +3,21 @@
 ## Description
 Alignment_by_numbers is a prototype reference-based nucleotide sequence aligner. The tool uses signal processing techniques to align short nucleotide sequences to a reference genome.
 ## Installation (Linux, Mac OS X):
-- Download repository as a zip or with `git clone https://github.com/Avramis/Alignment_by_numbers.git`  
-- `cd Code`  
-- `clang++ -Wall -O3 -o alignment_by_numbers *.cpp *.c *.cc` (compile)  
-- `mv alignment_by_numbers ../Exec`  
-- `../Exec/Alignment_by_numbers`  
+i.e for a Linux  or a Mac executable with GCC compiler 
+First step make the script executable using
+chmod u+x ./GCC_Installation
 
+  and then invoke the executable
+
+./GCC_Installation
+
+i.e. for for a Linux  or a Mac executable with Intel compiler 
+First step make the script executable using
+chmod u+x ./INTEK_Installation
+
+  and then invoke the executable
+
+./INTEL_Installation
 ## Examples
 ```
 Usage:
